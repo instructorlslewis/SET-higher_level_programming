@@ -1,3 +1,12 @@
+
+/**
+ * Professor Lewis
+ * September 22, 2026
+ */
+/**
+ * Employee Super/Parent class with constructor,two methods
+   and has-a project (implements Composition)
+*/ 
 class Employee{
     constructor(name, employeeId, department){
         this.name = name;
@@ -15,6 +24,9 @@ class Employee{
 
 }
 
+/**
+ * Create and employee object, test the describe() method and property chain methods.
+ */
 const employee1 = new Employee("Jane", "E101", "Technology");
 console.log(employee1);
 employee1.describe();
@@ -23,7 +35,12 @@ console.log(employee1.hasOwnProperty("describe"));
 console.log(Object.getPrototypeOf(employee1) === Employee.prototype);
 console.log(Object.keys(employee1));
 
-
+/**
+ * 
+ * Developer Subclass/Child class extends Employee (Parent) with constructor that invokes the super()method (Parents constructor) 
+ * and one overriden method
+   Is-An Relationship:  Developer is-an Employee
+*/ 
 class Developer extends Employee{
     constructor(name, employeeId, department, language){
         super(name, employeeId, department);
@@ -38,6 +55,10 @@ class Developer extends Employee{
     }
 }
 
+/**
+ *  Creates and initializes a Developer object, displays it's content, inoke it's overrident method and
+ * test it's prototype chain.
+ */
 const developer1 = new Developer("Tracy", "E102", "Software Engineering", "JavaScript");
 console.log(developer1);
 developer1.describe();
@@ -45,6 +66,11 @@ developer1.describe();
 console.log(Object.getPrototypeOf(developer1));
 console.log(Object.keys(developer1));
 console.log(Object.getOwnPropertyNames(Employee.prototype));
+
+/**
+ * Project an independent class, used in the Employee class to demonstrate Composition
+ * Relationships such as, Employee has-a Project.
+ */
 
 class Project{
     constructor(projectName, deadline){
@@ -58,6 +84,9 @@ class Project{
 
 }
 
+/**
+ * Build a project object and assign it to developer1.
+ */
 const websiteProject = new Project("Company Website", "October 30");
 websiteProject.displayProject();
 
