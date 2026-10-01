@@ -1,3 +1,12 @@
+/**
+ * Professor Lewis
+ * 9/30/2026
+ * Reinforces OOP concepts using file and JSON operations organized into small classes and methods.
+ * Student → represents the student data.
+ * FileManager → handles reading and writing files.
+ * JsonManager → handles JSON.stringify() and JSON.parse().
+ * 
+ */
 class Student {
     constructor(name, course, grade) {
         this.name = name;
@@ -49,16 +58,21 @@ const student = new Student(
 const fileManager = new FileManager();
 const jsonManager = new JsonManager();
 
-
-const jsonData = jsonManager.toJSON(student); //convert student to json then write to
-                                              //class-student.json
-
+/**
+ * Convert student to json then write to
+ * class-student.json file
+ */
+const jsonData = jsonManager.toJSON(student); 
+                                         
 fileManager.writeFile(
     'class-student.json',  //  write student object in json form →check 
     jsonData
 );
 
-
+/**
+ * Read JSON file and converts to JavaScript object
+ * Then displays specific student properties.
+ */
 const fileData = 
     fileManager.readFile('class-student.json');
  

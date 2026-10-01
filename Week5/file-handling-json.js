@@ -1,3 +1,8 @@
+/**
+ * File Handling
+ * Professor Lewis
+ * 9/30/2026
+ */
 const student1 ={
     name: "Tracy",
     course: "SE300"
@@ -10,13 +15,13 @@ const fs = require('fs');
  * Synchronous File Processing
  */
 
-// fs.writeFileSync('message.txt', 'Hello SE300 Students');
+fs.writeFileSync('message.txt', 'Hello SE300 Students');
 
-// console.log("1. Starting");
-// const data = fs.readFileSync('message.txt','utf8');
+console.log("1. Starting");
+const data = fs.readFileSync('message.txt','utf8');
 
-// console.log("2.", data);
-// console.log("3. Finished");
+console.log("2.", data);
+console.log("3. Finished");
 
 /**
  * Ansynchronous File processing

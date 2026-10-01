@@ -1,10 +1,10 @@
 ### API Request-Response Process
 ```text
-Application
+Application        //client 
     ↓ Request
-   API
+   API         
     ↓
- Server
+Server              //Endpoint:  https://jsonplaceholder.typicode.com/users/1
     ↓ Response
 Application
 ```
@@ -12,7 +12,7 @@ Application
 #### API - An interface that allows one application to communicate with another.
 #### Request - The message sent by the application asking for data or an action.
 #### Response - The information returned by the server.
-#### Endpoint - The URL used to access a specific API resource.
+#### Endpoint - The URL used to access a specific API resource. A specific URL or URL path exposed by an API that a client sends a request to in order to access a resource or perform an operation.
 
 ```text
 Common HTTP status codes include:
