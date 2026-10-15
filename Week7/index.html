@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Literacy Idea Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+    <header class="hero">
+      <span class="eyebrow">SE 300 • Week 7 JavaScript Lab</span>
+      <h1>AI Literacy Idea Lab</h1>
+      <p>Think of a task AI could help with. Add it to your idea board, review it, and explore a little inspiration!</p>
+    </header>
+                                   <!--using its text as the accessible label for this section.-->
+    <section class="panel" aria-labelledby="ideas-heading">
+      <div class="section-heading">
+        <h2 id="ideas-heading">Your AI Ideas</h2>
+        <span id="idea-count" class="count">0 ideas</span>
+      </div>
+      <form id="idea-form">
+        <label for="idea-input">What is one task AI could help you with?</label>
+        <div class="input-row">
+          <input id="idea-input" type="text" maxlength="120" placeholder="Example: Organize my study notes" required>
+          <button type="submit">Add Idea</button>
+        </div>
+      </form>
+      <p class="hint">Select <strong>Review</strong> when you've thought about how to verify the output.</p>
+      <ul id="idea-list" aria-label="AI ideas"></ul>
+      <p id="empty-message" class="empty">No ideas yet. Add your first one!</p>
+    </section>
+
+    <section class="panel accent" aria-labelledby="inspiration-heading">
+      <h2 id="inspiration-heading"> Inspiration Station</h2>
+      <p>Get a random quote from a public web API. This is dynamic API data, <strong>not AI-generated content</strong>.
+      </p>
+      <button id="quote-button" type="button">Surprise Me!</button>
+      <div id="quote-output" class="quote" role="status" aria-live="polite">Click the button to fetch a quote.</div>
+    </section>
+
+    <section class="panel takeaway" aria-labelledby="literacy-heading">
+      <h2 id="literacy-heading">AI Literacy Check</h2>
+      <p><strong>Discuss:</strong> If an AI tool produced an answer to your idea, how would you check whether it was
+        accurate, fair, and safe to use?</p>
+      <p class="hint">Always check important facts and avoid sharing private information with tools you do not trust.
+      </p>
+    </section>
+    <footer>Built with HTML, CSS, and plain JavaScript • SE 300</footer>
+  </main>
+</body>
+
+</html>
